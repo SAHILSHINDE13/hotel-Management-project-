@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining | Grand Palace Hotel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-hotel me-2"></i>Grand Palace Hotel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms & Suites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="dining.html">Dining</a></li>
+                    <li class="nav-item"><a class="nav-link" href="amenities.html">Amenities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center text-white">
+                    <h1 class="display-4 fw-bold">Dining Experience</h1>
+                    <p class="lead">Savor exquisite flavors from around the world</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurants Overview -->
+    <section class="page-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Our Restaurants</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card restaurant-card h-100">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="card-img-top" alt="Royal Spice">
+                        <div class="card-body">
+                            <h4 class="card-title">Royal Spice</h4>
+                            <p class="card-text">Authentic Indian cuisine with modern twists. Experience the rich flavors of India.</p>
+                            <div class="restaurant-info">
+                                <p><i class="fas fa-clock me-2"></i> 7:00 AM - 11:00 PM</p>
+                                <p><i class="fas fa-phone me-2"></i> +91 12345 67891</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card restaurant-card h-100">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="card-img-top" alt="Mediterranean Breeze">
+                        <div class="card-body">
+                            <h4 class="card-title">Mediterranean Breeze</h4>
+                            <p class="card-text">Fresh seafood and Mediterranean specialties with ocean views.</p>
+                            <div class="restaurant-info">
+                                <p><i class="fas fa-clock me-2"></i> 12:00 PM - 11:00 PM</p>
+                                <p><i class="fas fa-phone me-2"></i> +91 12345 67892</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card restaurant-card h-100">
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="card-img-top" alt="Sky Lounge">
+                        <div class="card-body">
+                            <h4 class="card-title">Sky Lounge</h4>
+                            <p class="card-text">Rooftop bar with panoramic city views and signature cocktails.</p>
+                            <div class="restaurant-info">
+                                <p><i class="fas fa-clock me-2"></i> 5:00 PM - 2:00 AM</p>
+                                <p><i class="fas fa-phone me-2"></i> +91 12345 67893</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Indian Food Ordering System -->
+    <section class="page-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Royal Spice - Indian Restaurant</h2>
+                    <p class="lead">Experience Authentic Indian Taste — Order Fresh, Fast, and Delicious!</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row" id="menu-list">
+                        <!-- Menu items will be dynamically loaded here -->
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="order-summary">
+                        <h3 class="text-center mb-4">🧾 Order Summary</h3>
+                        <div id="order-summary" class="mb-4">
+                            <p class="text-muted text-center">Your cart is empty</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5>Total:</h5>
+                            <h4 class="total-amount">₹<span id="total">0</span></h4>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button class="btn btn-success w-100" id="checkout-btn">Place Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Grand Palace Hotel</h5>
+                    <p>Experience luxury and comfort at our premier hotel destination.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Luxury Avenue, Mumbai, India</li>
+                        <li><i class="fas fa-phone me-2"></i> +91 12345 67890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@grandpalace.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Restaurant Reservations</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone me-2"></i> +91 12345 67891</li>
+                        <li><i class="fas fa-envelope me-2"></i> dining@grandpalace.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Open 7 Days a Week</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2025 Grand Palace Hotel. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
